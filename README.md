@@ -1,6 +1,7 @@
 # sort-json-by-key
 Sort JSON by key and don't change the value.
-(https://stedolan.github.io/jq/)[jq] command changes the representation of the value, but `sort-json-by-key` cli-tool don't change the representation.
+
+[jq](https://stedolan.github.io/jq/) command changes the representation of the value, but `sort-json-by-key` cli-tool don't change the representation.
 
 example
 ```
