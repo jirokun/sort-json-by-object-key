@@ -1,0 +1,23 @@
+{
+  "name": "sort-json-by-key",
+  "version": "0.1.0",
+  "description": "Sort JSON by key and do not change the value.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "author": "Jiro Iwamoto",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "json-parse-ast": "^1.0.8"
+  },
+  "bin": "sortjson",
+  "devDependencies": {
+    "mocha": "^9.0.1"
+  }
+}
