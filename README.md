@@ -52,7 +52,7 @@ $ jq --sort-keys < test.json
 ```
 
 ```
-$ node index.js < test.json
+$ sortjson index.js < test.json
 {
   "1": "🍣",
   "2": {
