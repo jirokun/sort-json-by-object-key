@@ -29,6 +29,7 @@ $ jq --sort-keys < test.json
     "xyz": 1
   }
 }
+```
 
 sort by this cli.
 representation is not changed.
