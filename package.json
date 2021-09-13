@@ -1,6 +1,6 @@
 {
   "name": "sort-json-by-object-key",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Sort JSON by key and do not change the value.",
   "scripts": {
     "test": "mocha"
