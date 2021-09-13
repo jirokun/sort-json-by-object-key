@@ -11,6 +11,7 @@
   ],
   "author": "Jiro Iwamoto",
   "license": "Apache-2.0",
+  "repository": "https://github.com/jirokun/sort-json-by-object-key",
   "dependencies": {
     "json-parse-ast": "^1.0.8",
     "yargs": "^16.2.0"
