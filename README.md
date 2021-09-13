@@ -1,76 +1,46 @@
-# sort-json-by-key
+# sort-json-by-object-key
 Sort JSON by key and don't change the value.
 
-[jq](https://stedolan.github.io/jq/) command changes the representation of the value, but `sort-json-by-key` cli-tool don't change the representation.
+If you use [jq](https://stedolan.github.io/jq/) or other commands to sort JSON by object key, the representation of the values will change, so I created this tool to sort JSON by object key without changing the representation of the values.
 
-example
-```
+# Example
+Here's a sample json.
+
+```bash
 $ cat test.json
 {
-  "defg": 3e7,
-  "abc": "🍣",
-  "bcd": {
+  "abc": 3e7,
+  "def": {
     "xyz": 1.0,
-    "bde": "abc"
-  },
-  "carray": [
-    123,
-    "abc",
-    {
-      "defg": 1.0,
-      "abc": "abc",
-      "bcd": {
-        "xyz": 1.0,
-        "bde": "abc"
-      }
-    }
-  ]
+    "uvw": "abc"
+  }
 }
 ```
 
-```
+sort by jq command with --sort-keys option.
+representation is changed.
+
+```bash
 $ jq --sort-keys < test.json
 {
-  "1": "🍣",
-  "2": {
-    "1": "abc",
-    "2": 1
-  },
-  "3": [
-    123,
-    "abc",
-    {
-      "1": {
-        "1": "abc",
-        "2": 3
-      },
-      "2": 2
-    }
-  ],
-  "4": 30000000
+  "abc": 30000000,
+  "def": {
+    "uvw": "abc",
+    "xyz": 1
+  }
 }
-```
 
-```
-$ sortjson index.js < test.json
+sort by this cli.
+representation is not changed.
+
+```bash
+$ sortjson < test.json
 {
-  "1": "🍣",
-  "2": {
-    "1": "abc",
-    "2": 1.00
-  },
-  "3": [
-    123,
-    "abc",
-    {
-      "1": {
-        "1": "abc",
-        "2": 3.00000000000000000000000000000000000000000001
-      },
-      "2": 2.0
-    }
-  ],
-  "4": 3e7
+  "abc": 3e7,
+  "def": {
+    "uvw": "abc",
+    "xyz": 1.0
+  }
 }
 ```
 
